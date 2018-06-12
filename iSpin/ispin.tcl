@@ -181,6 +181,11 @@ proc Widget::_opt_defaults {{prio widgetDefault}} {
 	    option add *Dialog.separator	1  $prio
 	    option add *MainFrame.relief	raised $prio
 	    option add *MainFrame.separator	none   $prio
+	    
+	    # required because of higher definition window making many widgets unreadable (too small), 
+	    # could be parametrized on window dpi (I may do that ... at some point)
+           option add *font 12x24
+
 	}
     }
 }
